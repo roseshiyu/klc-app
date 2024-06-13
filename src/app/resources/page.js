@@ -3,13 +3,9 @@ import { HoverEffect } from "../ui/card-hover-effect";
 export default function page() {
   return (
     <div className="max-w-5xl mx-auto px-8">
-      <HoverEffect items={projects} />
-    </div>
-  );
-}
-export const projects = [
+      <HoverEffect items={[
   {
-    title: "Stripe",
+    title: "！！！",
     description:
       "A technology company that builds economic infrastructure for the internet.",
     link: "https://stripe.com",
@@ -44,4 +40,7 @@ export const projects = [
       "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
     link: "https://microsoft.com",
   },
-];
+]} />
+    </div>
+  );
+}
