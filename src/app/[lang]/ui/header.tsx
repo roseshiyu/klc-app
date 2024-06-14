@@ -2,18 +2,21 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useParams } from 'next/navigation'
 
 export const Header = () => {
+  const params = useParams<{ lang: string } >()
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const navigation = [
-    { name: 'About', href: '/about_us' },
-    { name: 'Services', href: '/services' },
-    { name: 'Connect', href: '/connect' },
-    { name: 'Resources', href: '/resources' },
+    { name: 'About', href: `/${params.lang}/about_us` },
+    { name: 'Services', href: `/${params.lang}/services` },
+    { name: 'Connect', href: `/${params.lang}/connect` },
+    { name: 'Resources', href: `/${params.lang}/resources` },
   ]
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="inset-x-0 top-0 z-50">
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
