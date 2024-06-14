@@ -134,7 +134,7 @@ export const Footer = () => {
                     <address className="-mt-0.5 flex-1 not-italic text-gray-700">
                       1, Jalan Muhibbah 8, Taman Muhibbah, 43000 Kajang, Selangor
                     </address>
-                    
+
                   </li>
                 </ul>
               </div>
@@ -210,64 +210,65 @@ export const Footer = () => {
 
             <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
               <div>
-                <p className="font-medium text-gray-900">Services</p>
+                <p className="font-medium text-gray-900">活动</p>
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 1on1 Coaching </a>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 少年军 </a>
                   </li>
 
                   <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Company Review </a>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 陪读班 </a>
                   </li>
 
                   <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
-                  </li>
-
-                  <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> HR Consulting </a>
-                  </li>
-
-                  <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> SEO Optimisation </a>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 关怀 </a>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <p className="font-medium text-gray-900">Company</p>
+                <p className="font-medium text-gray-900">团契</p>
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> About </a>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 儿童乐园 （3-9岁）</a>
                   </li>
 
                   <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Meet the Team </a>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> GG3（10-12岁） </a>
                   </li>
 
                   <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> GG2（预备班-中三） </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> GG1（中四-中六） </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 爱加倍（高专-职青） </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 伉俪 </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 乐龄 </a>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <p className="font-medium text-gray-900">Helpful Links</p>
+                <p className="font-medium text-gray-900">资料</p>
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Contact </a>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 数码好消息 </a>
                   </li>
 
                   <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> FAQs </a>
+                    <a href="#" className="text-gray-700 transition hover:opacity-75"> 月刊 </a>
                   </li>
-
-                  <li>
-                    <a href="#" className="text-gray-700 transition hover:opacity-75"> Live Chat </a>
-                  </li>
+                
                 </ul>
               </div>
             </div>
@@ -287,7 +288,7 @@ export const Footer = () => {
                 </li>
               </ul>
 
-              <p className="mt-8 text-xs text-gray-500">&copy; 2022. Company Name. All rights reserved.</p>
+              <p className="mt-8 text-xs text-gray-500">&copy; 2024. KLC. All rights reserved.</p>
             </div>
           </div>
         </div>
