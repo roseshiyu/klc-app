@@ -26,6 +26,36 @@ export default async function Page({ params: { lang } }) {
   // return <button>{dict.products.cart}</button> // Add to Cart
   return (
     <div className="bg-orange-200">
+      <section
+        className="overflow-hidden bg-[url(https://images.unsplash.com/photo-1491396023581-4344e51fec5c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-top bg-no-repeat"
+      >
+        <div className='bg-black/25 '>
+          <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-48">
+            <div className="flex justify-end">
+              <div>
+              </div>
+              <div className='text-left '>
+                <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-5xl">数码好消息</h2>
+
+                <p className="hidden max-w-lg text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed">
+                  若您想了解及认识更多关于耶稣的事。
+                  我们诚心邀请您联络我们、临近的教会或基督徒。<br />
+                  邮件地址：awordoflove101@gmail.com
+                </p>
+
+                <div className="mt-4 sm:mt-8">
+                  <a
+                    href="mailto:awordoflove101@gmail.com"
+                    className="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                  >
+                    发送邮件
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="mx-auto max-w-screen-xl py-32 sm:py-48 lg:py-56">
         <div className="space-y-4">
           <details className="group [&_summary::-webkit-details-marker]:hidden border-2 rounded-xl border-red-500 bg-gray-50" open>
@@ -44,57 +74,28 @@ export default async function Page({ params: { lang } }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
-
             {chapters.map((item, index) => {
-              if (index == 0) {
-                return (
-                  <div key={item.name} className='flex flex-row justify-between	p-4 border-t border-red-400'>
-                    <p className="text-gray-700 content-center">
-                      {item.title}
-                    </p>
-                    <div className='grid justify-items-center gap-y-2'>
-                      <div className='flex gap-x-2'>
-                        {/* <span className=" whitespace-nowrap rounded-full bg-purple-100 border border-purple-700 px-2.5 py-0.5 text-sm text-purple-700">
-        福音
-      </span> */}
-                        <span className="whitespace-nowrap rounded-full bg-purple-100 border border-purple-700 px-2.5 py-0.5 text-sm text-purple-700">
-                          {item.tag}
-                        </span>
-                      </div>
-                      <a
-                        className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
-                        href={item.href} target="_blank"
-                      >
-                        点击查看
-                      </a>
+              return (
+                <div key={item.name} className={`flex flex-row justify-between p-4 ${index === 0 ? 'border-t border-red-400' : ''}`}>
+                  <p className="text-gray-700 content-center">
+                    {item.title}
+                  </p>
+                  <div className='grid justify-items-center gap-y-2'>
+                    <div className='flex gap-x-2'>
+                      <span className="whitespace-nowrap rounded-full bg-purple-100 border border-purple-700 px-2.5 py-0.5 text-sm text-purple-700">
+                        {item.tag}
+                      </span>
                     </div>
+                    <a
+                      className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                      href={item.href}
+                      target="_blank"
+                    >
+                      点击查看
+                    </a>
                   </div>
-                )
-              } else {
-                return (
-                  <div key={item.name} className='flex flex-row justify-between	p-4'>
-                    <p className="text-gray-700 content-center">
-                      {item.title}
-                    </p>
-                    <div className='grid justify-items-center gap-y-2'>
-                      <div className='flex gap-x-2'>
-                        {/* <span className=" whitespace-nowrap rounded-full bg-purple-100 border border-purple-700 px-2.5 py-0.5 text-sm text-purple-700">
-      福音
-    </span> */}
-                        <span className="whitespace-nowrap rounded-full bg-purple-100 border border-purple-700 px-2.5 py-0.5 text-sm text-purple-700">
-                          {item.tag}
-                        </span>
-                      </div>
-                      <a
-                        className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
-                        href={item.href} target="_blank"
-                      >
-                        点击查看
-                      </a>
-                    </div>
-                  </div>
-                )
-              }
+                </div>
+              )
             })}
 
 
