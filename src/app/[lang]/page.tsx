@@ -40,7 +40,55 @@ export default function Example() {
   return (
 
     <div className="bg-orange-200">
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <section
+        className="overflow-hidden bg-[url(https://lh3.googleusercontent.com/pw/AP1GczNEy6Z8hzvAkGYYc5pU9I71J16HAhp7P2sr6kwjt0ojb9quAxI5OVbEpoHeMsRlc5qIBS4SCSHx0RaSum7P_ilUZraBvQ0HsYMUeOobClzrsmm9Gci1NlrhtTQSDlwLi4SPlQPb1n3TpTF5Mp369TfrUSuudIelG0CVmQiOLkn7M4mne2036V794V2EY2_8Dg51RcEX_fCXmsk13FQ-TVdVp1I9rPPLCgWlLd8-fH51lyL0ahHAUdfk-Fdh6AlsOq0Dc9P8ko_aoNKKjdB2igdAUXRG-wC31fcd1IzGrnX1FCdX_ytW6L67v_HW8QJwluJx4zeURwOBhBRCfBUwmZPqtE7Ya48wEDPZ4QkylgpOngqm3eyfw5iwvmGXKT63Ihm_sqkmi5J1yPT_mY1PDH0pGEEoN4uEdGEwJifAar6HYqza_8J_zIiuaW2icE-CF9nPxYUOtiaaj5Km0Iyt30y5gnlQNifGtS1cgki2JsRLHUBOgcdeh5NGCzUBsXB7Fcl4JpfRrt_-f-hnvbQVbgpmwhyIOREItpZCImLinjgWvK281qc3o78M-ETJuGYpczDGwNO7iX7mUprww9dKDtTebz2ACaJcFZCp7dfA1yBsfqmyym64FC37NLKYU_-nCQgjTpkEziN8zRZ-BRGefUUdEa56XSJTNW8ZLV-lKIfROmQDW2XLoR-lgvh7IdQJelgmw2HHK3SkbS36h-zG_wN6piKOx8h0MiIso0WSxgRD46wO4p2vd1pglrGJ1fCW0wRC2Tw3hFSi5XmaLyMmEaCDx3FXAIgj4uO0gL7vauvZQpePjHoUmkYrZovFw1qFZPf2NA9o_q5pxgw7OX0jQoLgogYMBkqdtSQWbmhcLIzD2iq1nHSkYjGPKQvxjqJtIvo0li0nxWFDWH9xMZoJMQ=w1245-h683-s-no-gm?authuser=0)] bg-cover bg-top bg-no-repeat"
+      >
+        <div className='bg-black/25 '>
+          <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-48">
+            <div className="flex justify-end">
+              <div>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-5xl">加影生命堂</h2>
+                <HeroHighlight>
+                  <motion.h1
+                    initial={{
+                      opacity: 0,
+                      y: 20,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: [20, -5, 0],
+                    }}
+                    transition={{
+                      duration: 0.5,
+                      ease: [0.4, 0.0, 0.2, 1],
+                    }}
+                    className="text-1xl px-4 md:text-1xl lg:text-2xl font-bold text-gray-100 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+                  >
+                    【约十10】「我来了，是要叫羊(或作人)<br />得生命，
+                    <Highlight className="text-black dark:text-white">
+                      并且得的更丰盛
+                    </Highlight>
+                    。」
+                  </motion.h1>
+                </HeroHighlight>
+
+                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    欢迎来到我们的网页.{' '}
+                    <a href="#" className="font-semibold text-gray-100">
+                      <span className="absolute inset-0" aria-hidden="true" />
+                      了解更多吧 <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <div className="relative isolate px-6 pt-14 lg:px-8">
 
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -62,9 +110,9 @@ export default function Example() {
               加影生命堂
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              {/* 【约十10】「我来了，是要叫羊(或作人)得生命，并且得的
+              【约十10】「我来了，是要叫羊(或作人)得生命，并且得的
               <span className="inset-0 text-red-500" aria-hidden="true" >
-                更丰盛。」</span> */}
+                更丰盛。」</span>
             </p>
             <HeroHighlight>
               <motion.h1
@@ -88,8 +136,8 @@ export default function Example() {
                 </Highlight>
                 。」
               </motion.h1>
-            </HeroHighlight>
-            {/* <div className="mt-10 flex items-center justify-center gap-x-6">
+            </HeroHighlight> */}
+      {/* <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -100,9 +148,9 @@ export default function Example() {
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div> */}
-          </div>
+      {/* </div>
         </div>
-      </div>
+      </div> */}
       {/* <div className="h-[20rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
           items={testimonials}

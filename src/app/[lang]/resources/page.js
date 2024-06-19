@@ -19,15 +19,155 @@ const chapters = [
   { title: '好消息 12 - 大结局', href: `https://anyflip.com/qvwmh/bgkx/`, tag: '福音' },
 ]
 
-import { getDictionary } from '../dictionaries'
+const ImageBanner = ({ image }) => (
+  <Image src={image} className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100" alt='image' />
+);
+const items = [
+  {
+    title: "好消息 1 - 平安何处寻",
+    description: "2020年是历史上难以磨灭的一年。对很多人来说，2020年不仅看不见任何宏景。。。",
+    header: <ImageBanner image={dgn_y1_01} />
+    ,
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/rewk/"
+  },
+  {
+    title: "好消息 2 - 末日",
+    description: "Dive into the transformative power of technology.",
+    header: <ImageBanner image={dgn_y1_02} />,
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/vcml/"
+  },
+  {
+    title: "好消息 3 - 穆斯林与犹太人的冲突",
+    description: "Discover the beauty of thoughtful and functional design.",
+    header: <ImageBanner image={dgn_y1_03} />,
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/hkgg/"
 
+  },
+  {
+    title: "好消息 4 - 一本奇妙的书",
+    description:
+      "Understand the impact of effective communication in our lives.",
+    header: <ImageBanner image={dgn_y1_04} />,
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/pgpv/"
+  },
+  {
+    title: "好消息 5 - 谁知晓明日",
+    description: "Join the quest for understanding and enlightenment.",
+    header: <ImageBanner image={dgn_y1_05} />,
+    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/qeej/"
+  },
+  {
+    title: "好消息 6 - 因为爱",
+    description: "Experience the thrill of bringing ideas to life.",
+    header: <ImageBanner image={dgn_y1_06} />,
+    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/orsq/"
+  },
+  {
+    title: "好消息 7（上）- 神州古人的信仰",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_07_1} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/nmgl/"
+  },
+  {
+    title: "好消息 7（下）- 神州古人的信仰",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_07_2} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/bfpf/"
+  },
+  {
+    title: "好消息 8  - 从犹太人的历史证明圣经的可信性",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_08} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/qkqu/"
+  },
+  {
+    title: "圣诞好消息特刊",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_i} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/rilg/"
+  },
+  {
+    title: "好消息9（上）- 您岂能说没有上帝",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_09_1} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/aprx/"
+  },
+  {
+    title: "好消息9（下）- 您岂能说没有上帝",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_09_2} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/pxsd/"
+  },
+  {
+    title: "好消息 10 - 与上帝和好",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_10} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/diqp/"
+  },
+  {
+    title: "好消息 11 - 5W1H",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_11} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/hhhy/"
+  },
+  {
+    title: "好消息 12 - 大结局",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <ImageBanner image={dgn_y1_12} />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: "https://anyflip.com/qvwmh/bgkx/"
+  },
+];
+import { cn } from "@/utils/cn";
+import React from "react";
+import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
+import {
+  IconArrowWaveRightUp,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
+import { getDictionary } from '../dictionaries'
+import Image from 'next/image'
+import { building, dgn_y1_01, dgn_y1_02, dgn_y1_03, dgn_y1_04, dgn_y1_05, dgn_y1_06, dgn_y1_07_1, dgn_y1_07_2, dgn_y1_08, dgn_y1_09_1, dgn_y1_09_2, dgn_y1_10, dgn_y1_11, dgn_y1_12, dgn_y1_i } from '../../../../public';
 export default async function Page({ params: { lang } }) {
   // const dict = await getDictionary(lang) // en
   // return <button>{dict.products.cart}</button> // Add to Cart
   return (
     <div className="bg-orange-200">
-      <section
-        className="overflow-hidden bg-[url(https://images.unsplash.com/photo-1491396023581-4344e51fec5c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-top bg-no-repeat"
+      <div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+        <Image src={building} alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
+
+        <div class="min-h-[350px] relative z-50 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
+          <h2 class="sm:text-4xl text-2xl font-bold mb-6">Explore the World</h2>
+          <p class="sm:text-lg text-base text-center text-gray-200">Embark on unforgettable journeys. Book your dream vacation today!</p>
+
+          <button
+            type="button"
+            class="mt-12 bg-transparent text-white text-base py-3 px-6 border border-white rounded-lg hover:bg-white hover:text-black transition duration-300">
+            Book Now
+          </button>
+        </div>
+      </div>
+      {/* <section
+        className="overflow-hidden bg-[url(https://lh3.googleusercontent.com/pw/AP1GczNEy6Z8hzvAkGYYc5pU9I71J16HAhp7P2sr6kwjt0ojb9quAxI5OVbEpoHeMsRlc5qIBS4SCSHx0RaSum7P_ilUZraBvQ0HsYMUeOobClzrsmm9Gci1NlrhtTQSDlwLi4SPlQPb1n3TpTF5Mp369TfrUSuudIelG0CVmQiOLkn7M4mne2036V794V2EY2_8Dg51RcEX_fCXmsk13FQ-TVdVp1I9rPPLCgWlLd8-fH51lyL0ahHAUdfk-Fdh6AlsOq0Dc9P8ko_aoNKKjdB2igdAUXRG-wC31fcd1IzGrnX1FCdX_ytW6L67v_HW8QJwluJx4zeURwOBhBRCfBUwmZPqtE7Ya48wEDPZ4QkylgpOngqm3eyfw5iwvmGXKT63Ihm_sqkmi5J1yPT_mY1PDH0pGEEoN4uEdGEwJifAar6HYqza_8J_zIiuaW2icE-CF9nPxYUOtiaaj5Km0Iyt30y5gnlQNifGtS1cgki2JsRLHUBOgcdeh5NGCzUBsXB7Fcl4JpfRrt_-f-hnvbQVbgpmwhyIOREItpZCImLinjgWvK281qc3o78M-ETJuGYpczDGwNO7iX7mUprww9dKDtTebz2ACaJcFZCp7dfA1yBsfqmyym64FC37NLKYU_-nCQgjTpkEziN8zRZ-BRGefUUdEa56XSJTNW8ZLV-lKIfROmQDW2XLoR-lgvh7IdQJelgmw2HHK3SkbS36h-zG_wN6piKOx8h0MiIso0WSxgRD46wO4p2vd1pglrGJ1fCW0wRC2Tw3hFSi5XmaLyMmEaCDx3FXAIgj4uO0gL7vauvZQpePjHoUmkYrZovFw1qFZPf2NA9o_q5pxgw7OX0jQoLgogYMBkqdtSQWbmhcLIzD2iq1nHSkYjGPKQvxjqJtIvo0li0nxWFDWH9xMZoJMQ=w1245-h683-s-no-gm?authuser=0)] bg-cover bg-top bg-no-repeat"
       >
         <div className='bg-black/25 '>
           <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-48">
@@ -55,7 +195,25 @@ export default async function Page({ params: { lang } }) {
             </div>
           </div>
         </div>
-      </section>
+
+      </section> */}
+
+
+
+      <BentoGrid className="max-w-4xl mx-auto">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            icon={item.icon}
+            className={i === 3 || i === 6 || i === 10 || i === 13 ? "md:col-span-2" : ""}
+            link={item.link}
+          />
+        ))}
+      </BentoGrid>
+
       <div className="mx-auto max-w-screen-xl py-32 sm:py-48 lg:py-56">
         <div className="space-y-4">
           <details className="group [&_summary::-webkit-details-marker]:hidden border-2 rounded-xl border-red-500 bg-gray-50" open>
@@ -76,7 +234,7 @@ export default async function Page({ params: { lang } }) {
             </summary>
             {chapters.map((item, index) => {
               return (
-                <div key={item.name} className={`flex flex-row justify-between p-4 ${index === 0 ? 'border-t border-red-400' : ''}`}>
+                <div key={index} className={`flex flex-row justify-between p-4 ${index === 0 ? 'border-t border-red-400' : ''}`}>
                   <p className="text-gray-700 content-center">
                     {item.title}
                   </p>
