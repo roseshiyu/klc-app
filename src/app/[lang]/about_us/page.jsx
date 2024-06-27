@@ -92,23 +92,23 @@ export default async function Page({ params: { lang } }) {
 </div> */}
 
 
-export const chapters = [
-  { title: '好消息 1 - 平安何处寻', href: `https://anyflip.com/qvwmh/rewk/`, tag: '福音' },
-  { title: '好消息 2 - 末日', href: `https://anyflip.com/qvwmh/vcml/`, tag: '福音' },
-  { title: '好消息 3 - 穆斯林与犹太人的冲突', href: `https://anyflip.com/qvwmh/hkgg/`, tag: '福音' },
-  { title: '好消息 4 - 一本奇妙的书', href: `https://anyflip.com/qvwmh/pgpv/`, tag: '福音' },
-  { title: '好消息 5 - 谁知晓明日', href: `https://anyflip.com/qvwmh/qeej/`, tag: '福音' },
-  { title: '好消息 6 - 因为爱', href: `https://anyflip.com/qvwmh/orsq/`, tag: '福音' },
-  { title: '好消息 7（上）- 神州古人的信仰', href: `https://anyflip.com/qvwmh/nmgl/`, tag: '福音' },
-  {
-    title: '好消息 7（下）- 神州古人的信仰', href: `https://anyflip.com/qvwmh/bfpf/
-`, tag: '福音'
-  },
-  { title: '好消息 8  - 从犹太人的历史证明圣经的可信性', href: `https://anyflip.com/qvwmh/qkqu/`, tag: '福音' },
-  { title: '圣诞好消息特刊', href: `https://anyflip.com/qvwmh/rilg/ `, tag: '福音' },
-  { title: '好消息9（上）- 您岂能说没有上帝', href: `https://anyflip.com/qvwmh/aprx/`, tag: '福音' },
-  { title: '好消息9（下）- 您岂能说没有上帝', href: `https://anyflip.com/qvwmh/pxsd/`, tag: '福音' },
-  { title: '好消息 10 - 与上帝和好', href: `https://anyflip.com/qvwmh/diqp/ `, tag: '福音' },
-  { title: '好消息 11 - 5W1H', href: `https://anyflip.com/qvwmh/hhhy/`, tag: '福音' },
-  { title: '好消息 12 - 大结局', href: `https://anyflip.com/qvwmh/bgkx/`, tag: '福音' },
-]
+// export const chapters = [
+//   { title: '好消息 1 - 平安何处寻', href: `https://anyflip.com/qvwmh/rewk/`, tag: '福音' },
+//   { title: '好消息 2 - 末日', href: `https://anyflip.com/qvwmh/vcml/`, tag: '福音' },
+//   { title: '好消息 3 - 穆斯林与犹太人的冲突', href: `https://anyflip.com/qvwmh/hkgg/`, tag: '福音' },
+//   { title: '好消息 4 - 一本奇妙的书', href: `https://anyflip.com/qvwmh/pgpv/`, tag: '福音' },
+//   { title: '好消息 5 - 谁知晓明日', href: `https://anyflip.com/qvwmh/qeej/`, tag: '福音' },
+//   { title: '好消息 6 - 因为爱', href: `https://anyflip.com/qvwmh/orsq/`, tag: '福音' },
+//   { title: '好消息 7（上）- 神州古人的信仰', href: `https://anyflip.com/qvwmh/nmgl/`, tag: '福音' },
+//   {
+//     title: '好消息 7（下）- 神州古人的信仰', href: `https://anyflip.com/qvwmh/bfpf/
+// `, tag: '福音'
+//   },
+//   { title: '好消息 8  - 从犹太人的历史证明圣经的可信性', href: `https://anyflip.com/qvwmh/qkqu/`, tag: '福音' },
+//   { title: '圣诞好消息特刊', href: `https://anyflip.com/qvwmh/rilg/ `, tag: '福音' },
+//   { title: '好消息9（上）- 您岂能说没有上帝', href: `https://anyflip.com/qvwmh/aprx/`, tag: '福音' },
+//   { title: '好消息9（下）- 您岂能说没有上帝', href: `https://anyflip.com/qvwmh/pxsd/`, tag: '福音' },
+//   { title: '好消息 10 - 与上帝和好', href: `https://anyflip.com/qvwmh/diqp/ `, tag: '福音' },
+//   { title: '好消息 11 - 5W1H', href: `https://anyflip.com/qvwmh/hhhy/`, tag: '福音' },
+//   { title: '好消息 12 - 大结局', href: `https://anyflip.com/qvwmh/bgkx/`, tag: '福音' },
+// ]
