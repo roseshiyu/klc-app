@@ -14,16 +14,16 @@ export const Header = () => {
   // console.log(params.lang);
   // const [lang, setLang] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [locale, setLocale] = useState(params.lang ?? 'cn')
+  // const [locale, setLocale] = useState(params.lang ?? 'cn')
   const navigation = [
     // { name: '主页', href: `/${params.lang}/` },
     // { name: '关于我们', href: `/${params.lang}/about_us` },
     // { name: '活动与团契', href: `/${params.lang}/connect` },
     // { name: '资料', href: `/${params.lang}/resources` },
-    { name: '主页', href: `/${params.lang}/` },
-    { name: '关于我们', href: `/${params.lang}/about_us` },
-    { name: '活动与团契', href: `/${params.lang}/connect` },
-    { name: '资料', href: `/${params.lang}/resources` },
+    { name: '主页', href: `/cn/` },
+    { name: '关于我们', href: `/cn/about_us` },
+    { name: '活动与团契', href: `/cn/connect` },
+    { name: '资料', href: `/cn/resources` },
   ]
 
   return (
