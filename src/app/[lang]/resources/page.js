@@ -71,7 +71,7 @@ const ImageBanner = ({ image }) => (
   <Image src={image} className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100 object-cover" alt='image' />
 );
 
-export const items = [
+const items = [
   {
     title: "好消息 1 - 平安何处寻",
     description: "2020年是历史上难以磨灭的一年。对很多人来说，2020年不仅看不见任何宏景。。。",
