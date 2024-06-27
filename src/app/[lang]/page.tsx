@@ -6,8 +6,15 @@ import { useEffect, useState } from "react";
 import Script from "next/script";
 import { building, whatsApp } from '../../../public';
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-
+import './styles.css';
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const words = [
   "【诗篇 95:1】来啊，我们要向耶和华歌唱，向拯救我们的磐石欢呼。",
   "【诗篇 95:6 - 7】来啊，我们要屈身敬拜，在造我们的耶和华面前跪下。 因为他是我们的神；我们是他草场的羊，是他手下的民。惟愿你们今天听他的话。",
@@ -126,6 +133,125 @@ export default function Example() {
           </div>
         </div>
       </section>
+
+      <section>
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
+            <div className="grid place-content-center rounded bg-gray-100 p-6 sm:p-8">
+              <div className="mx-auto max-w-md text-center lg:text-left">
+                <header>
+                  <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">Watches</h2>
+
+                  <p className="mt-4 text-gray-500">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas rerum quam amet
+                    provident nulla error!
+                  </p>
+                </header>
+
+                <a
+                  href="#"
+                  className="mt-8 inline-block rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
+                >
+                  Shop All
+                </a>
+              </div>
+            </div>
+            <div className="lg:col-span-2 lg:py-8">
+              <Swiper
+                slidesPerView={2}
+                spaceBetween={30}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <a href="#" className="group relative block">
+                    <div className="relative h-[350px] sm:h-[450px]">
+                      <img
+                        src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
+                      />
+
+                      <img
+                        src="https://images.unsplash.com/photo-1593795899630-b6033c0fa58d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
+                      />
+                    </div>
+
+                    <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+                      <h3 className="text-xl font-medium text-white">Skinny Jeans Blue</h3>
+
+                      <p className="mt-1.5 text-pretty text-xs text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sequi dicta impedit
+                        aperiam ipsum!
+                      </p>
+
+                      <span
+                        className="mt-3 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                      >
+                        Shop Now
+                      </span>
+                    </div>
+                  </a>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <a href="#" className="group relative block">
+                    <div className="relative h-[350px] sm:h-[450px]">
+                      <img
+                        src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
+                      />
+
+                      <img
+                        src="https://images.unsplash.com/photo-1593795899630-b6033c0fa58d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
+                      />
+                    </div>
+
+                    <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+                      <h3 className="text-xl font-medium text-white">Skinny Jeans Blue</h3>
+
+                      <p className="mt-1.5 text-pretty text-xs text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sequi dicta impedit
+                        aperiam ipsum!
+                      </p>
+
+                      <span
+                        className="mt-3 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                      >
+                        Shop Now
+                      </span>
+                    </div>
+                  </a>
+                </SwiperSlide>
+                <SwiperSlide>Slide 3</SwiperSlide>
+                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>Slide 5</SwiperSlide>
+                <SwiperSlide>Slide 6</SwiperSlide>
+                <SwiperSlide>Slide 7</SwiperSlide>
+                <SwiperSlide>Slide 8</SwiperSlide>
+                <SwiperSlide>Slide 9</SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+
+        </div>
+      </section>
       {/* <div className="relative isolate px-6 pt-14 lg:px-8">
 
         <div
@@ -196,6 +322,6 @@ export default function Example() {
           speed="slow"
         />
       </div> */}
-    </div>
+    </div >
   )
 }
