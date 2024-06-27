@@ -43,7 +43,7 @@ export const Header = () => {
           <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse z-50 ">
             <Menu as="div" className="relative inline-block text-left">
               <div>
-                <MenuButton value={locale} className="inline-flex items-center w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50
+                <MenuButton className="inline-flex items-center w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50
                 dark:text-white cursor-pointer dark:hover:bg-gray-700 dark:hover:text-white">
                   <svg
                     className="h-3.5 w-3.5 rounded-full me-2"
