@@ -2,87 +2,125 @@
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
+import { useEffect, useState } from "react";
+import Script from "next/script";
+import { building, whatsApp } from '../../../public';
+import Image from "next/image";
 
 
-
-const testimonials = [
-  {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
-  },
+const words = [
+  "【诗篇 95:1】来啊，我们要向耶和华歌唱，向拯救我们的磐石欢呼。",
+  "【诗篇 95:6 - 7】来啊，我们要屈身敬拜，在造我们的耶和华面前跪下。 因为他是我们的神；我们是他草场的羊，是他手下的民。惟愿你们今天听他的话。",
+  "【诗篇 66:4】全地要敬拜你，歌颂你，要歌颂你的名。 （细拉）",
+  "【约翰福音 4:24】主啊，你所造的万民都要来敬拜你；他们也要荣耀你的名。",
+  " 【以弗所书 5:19】当用诗章、颂词、灵歌、彼此对说，口唱心和的赞美主。",
 ];
+
+
 export default function Example() {
+  const [age, setAge] = useState(0);
+  const [word, setWord] = useState(words[age]);
+  const [copySuccess, setCopySuccess] = useState(false);
+
+  useEffect(() => {
+    const randomAge = Math.floor(Math.random() * 5);
+    setAge(randomAge);
+    setWord(words[randomAge]);
+  }, [words]);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(word).then(() => {
+      setCopySuccess(true);
+      setTimeout(() => {
+        setCopySuccess(false);
+      }, 2000); // Hide the success message after 2 seconds
+    })
+      .catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+  };
+
   return (
-
-    <div className="bg-orange-200">
+    <div className="bg-orange-300">
       <section
-        className="overflow-hidden bg-[url(https://lh3.googleusercontent.com/pw/AP1GczNEy6Z8hzvAkGYYc5pU9I71J16HAhp7P2sr6kwjt0ojb9quAxI5OVbEpoHeMsRlc5qIBS4SCSHx0RaSum7P_ilUZraBvQ0HsYMUeOobClzrsmm9Gci1NlrhtTQSDlwLi4SPlQPb1n3TpTF5Mp369TfrUSuudIelG0CVmQiOLkn7M4mne2036V794V2EY2_8Dg51RcEX_fCXmsk13FQ-TVdVp1I9rPPLCgWlLd8-fH51lyL0ahHAUdfk-Fdh6AlsOq0Dc9P8ko_aoNKKjdB2igdAUXRG-wC31fcd1IzGrnX1FCdX_ytW6L67v_HW8QJwluJx4zeURwOBhBRCfBUwmZPqtE7Ya48wEDPZ4QkylgpOngqm3eyfw5iwvmGXKT63Ihm_sqkmi5J1yPT_mY1PDH0pGEEoN4uEdGEwJifAar6HYqza_8J_zIiuaW2icE-CF9nPxYUOtiaaj5Km0Iyt30y5gnlQNifGtS1cgki2JsRLHUBOgcdeh5NGCzUBsXB7Fcl4JpfRrt_-f-hnvbQVbgpmwhyIOREItpZCImLinjgWvK281qc3o78M-ETJuGYpczDGwNO7iX7mUprww9dKDtTebz2ACaJcFZCp7dfA1yBsfqmyym64FC37NLKYU_-nCQgjTpkEziN8zRZ-BRGefUUdEa56XSJTNW8ZLV-lKIfROmQDW2XLoR-lgvh7IdQJelgmw2HHK3SkbS36h-zG_wN6piKOx8h0MiIso0WSxgRD46wO4p2vd1pglrGJ1fCW0wRC2Tw3hFSi5XmaLyMmEaCDx3FXAIgj4uO0gL7vauvZQpePjHoUmkYrZovFw1qFZPf2NA9o_q5pxgw7OX0jQoLgogYMBkqdtSQWbmhcLIzD2iq1nHSkYjGPKQvxjqJtIvo0li0nxWFDWH9xMZoJMQ=w1245-h683-s-no-gm?authuser=0)] bg-cover bg-top bg-no-repeat"
+        className="overflow-hidden bg-[url(https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-bottom"
       >
-        <div className='bg-black/25 '>
-          <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-48">
-            <div className="flex justify-end">
-              <div>
+        <div className='bg-black/65'>
+          <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-56">
+            <div className="text-center grid grid-cols-1 gap-12">
+              <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-6xl">欢迎来到
+                <span className="text-orange-600">加影生命堂</span>
+              </h2>
+              <h2 className="text-2xl font-bold text-gray-100 ">
+                【约十10】「我来了，是要叫羊(或作人)
+                <span className="text-orange-600">得生命</span>， 并且
+                <span className="text-orange-600">得的更丰盛</span>
+                。」
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="bg-neutral-50 border-b-4 border-black/65">
+          <div className="mx-auto max-w-screen-xl px-4 py-12 ">
+            <div className="text-center text-xl font-bold flex justify-evenly ">
+              <h2>仁爱</h2>
+              <h2>喜乐</h2>
+              <h2>和平</h2>
+              <h2>忍耐</h2>
+              <h2>恩慈</h2>
+              <h2>良善</h2>
+              <h2>信实</h2>
+              <h2>温柔</h2>
+              <h2>节制</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:h-auto lg:grid-cols-2">
+            <div className="relative z-10 lg:py-16">
+              <div className="relative h-64 sm:h-80 lg:h-full">
+                <Image src={building} alt="Kajang Life Chapel Building" className="absolute inset-0 h-full w-full object-cover" />
               </div>
-              <div>
-                <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-5xl">加影生命堂</h2>
-                <HeroHighlight>
-                  <motion.h1
-                    initial={{
-                      opacity: 0,
-                      y: 20,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: [20, -5, 0],
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      ease: [0.4, 0.0, 0.2, 1],
-                    }}
-                    className="text-1xl px-4 md:text-1xl lg:text-2xl font-bold text-gray-100 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
-                  >
-                    【约十10】「我来了，是要叫羊(或作人)<br />得生命，
-                    <Highlight className="text-black dark:text-white">
-                      并且得的更丰盛
-                    </Highlight>
-                    。」
-                  </motion.h1>
-                </HeroHighlight>
+            </div>
 
-                <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                  <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                    欢迎来到我们的网页.{' '}
-                    <a href="#" className="font-semibold text-gray-100">
-                      <span className="absolute inset-0" aria-hidden="true" />
-                      了解更多吧 <span aria-hidden="true">&rarr;</span>
-                    </a>
-                  </div>
-                </div>
+            <div className="relative flex items-center bg-gray-100">
+              <span
+                className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"
+              ></span>
+
+              <div className="p-8 sm:p-16 lg:p-24">
+                <h2 className="text-2xl font-bold sm:text-3xl">
+                  加影生命堂
+                </h2>
+
+                <p className="mt-4 text-gray-600">
+                  我们是一间位于马来西亚雪兰莪州加影的基督徒教会，弟兄会背景的独立教会。野新福音堂差派亚绍兄夫妇创办此教会。
+                </p>
+                <br />
+                <table className="table-auto">
+                  <tbody>
+                    <tr>
+                      <td className="font-bold">主日崇拜</td>
+                      <td>每周日，早上8点30 - 10点30</td>
+                    </tr>
+                    <tr>
+                      <td className="font-bold"> 祷告会</td>
+                      <td> 每周二，晚上8点 - 10点</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br />
+                <p className="text-gray-600 hover:text-gray-950">
+                  {/* {words[1]} */}
+                  {words[age]}
+                </p>
+                {/* {copySuccess && (
+                    <p className="mt-4 text-green-500">Text copied to clipboard!</p>
+                  )} */}
               </div>
             </div>
           </div>

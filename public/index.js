@@ -15,4 +15,5 @@ export { default as dgn_y1_09_2 } from './dng_y1/09_2.png';
 export { default as dgn_y1_11 } from './dng_y1/11.png';
 export { default as dgn_y1_12 } from './dng_y1/12.png';
 export { default as dgn_y1_i } from './dng_y1/i.png';
-export { default as building } from './/building.png';
+export { default as building } from './building.png';
+export { default as whatsApp } from './whatsAppButtonGreenSmall.svg';
