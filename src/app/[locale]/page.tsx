@@ -221,7 +221,7 @@ export default function Page({
                   </a>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <a href="#" className="group relative block">
+                  <div className="group relative block">
                     <div className="relative h-[350px] sm:h-[450px]">
                       <img
                         src="https://plus.unsplash.com/premium_photo-1661378547884-ce0b2d304900?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -290,7 +290,7 @@ export default function Page({
                         立刻报名
                       </a>
                     </div>
-                  </a>
+                  </div>
                 </SwiperSlide>
               </Swiper>
             </div>
