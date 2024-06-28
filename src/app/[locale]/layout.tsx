@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   title: "Kajang life chapel",
   description: "Church in Kajang",
   openGraph: {
-    description: "Church in Kajang"
+    description: "Church in Kajang",
+    images: ["https://scontent.fkul8-3.fna.fbcdn.net/v/t39.30808-6/330848718_5986069698102537_190477537028308587_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=OPJDleBHt5cQ7kNvgFX96L-&_nc_ht=scontent.fkul8-3.fna&oh=00_AYDI1IwYWF77iLhnune52o3c5-LUD5SnxGIu-gBLeN5IpQ&oe=66846E0A"]
   },
   verification: { google: "WOMw_7TKxB-s9jLBxCog6vptluMoUrQ8hG4PazGjSUQ" },
 };
