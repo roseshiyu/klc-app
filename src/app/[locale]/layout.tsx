@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     description: "Church in Kajang"
   },
-  verification: { google: "googleccec39a3ecda69c3" },
+  verification: { google: "WOMw_7TKxB-s9jLBxCog6vptluMoUrQ8hG4PazGjSUQ" },
 };
 
 export default async function RootLayout({
