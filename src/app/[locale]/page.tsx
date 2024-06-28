@@ -143,22 +143,30 @@ export default function Page({
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
-            <div className="grid place-content-center rounded bg-gray-100 p-6 sm:p-8">
+            <div className="grid place-content-center rounded bg-gray-200 p-6 sm:p-8">
               <div className="mx-auto max-w-md text-center lg:text-left">
                 <header>
-                  <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">Watches</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 sm:text-6xl ">
+                    看这边！
+                  </h2>
+                  <h2 className="mt-8 text-xl font-bold text-gray-900 sm:text-3xl">我们的
+                    <span className="text-neutral-100 bg-red-500">特别活动</span>
+                  </h2>
 
                   <p className="mt-4 text-gray-500">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas rerum quam amet
-                    provident nulla error!
+                    这里有我们近期教会的特别活动，欢迎你们
+                    <span className="text-neutral-100 bg-red-500 font-bold">点击</span>
+                    ，并且参加此活动。
+                    <span className="text-neutral-100 bg-red-500 font-bold">我们到时见👋</span>
+                    。
                   </p>
                 </header>
 
                 <a
                   href="#"
-                  className="mt-8 inline-block rounded border border-gray-900 bg-gray-900 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
+                  className="mt-8 inline-block rounded border border-red-500 bg-red-500 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
                 >
-                  Shop All
+                  显示所有
                 </a>
               </div>
             </div>
@@ -167,45 +175,48 @@ export default function Page({
                 slidesPerView={2}
                 spaceBetween={30}
                 autoplay={{
-                  delay: 2500,
+                  delay: 10000,
                   disableOnInteraction: false,
                 }}
                 pagination={{
                   clickable: true,
                 }}
+                loop={true}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <a href="#" className="group relative block">
-                    <div className="relative h-[350px] sm:h-[450px]">
+                  <a href="#" className="group relative block ">
+                    <div className="relative h-[350px] sm:h-[450px] ">
                       <img
-                        src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+                        src="https://images.unsplash.com/photo-1544829832-c8047d6b9d89?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
                       />
 
                       <img
-                        src="https://images.unsplash.com/photo-1593795899630-b6033c0fa58d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                        src="https://plus.unsplash.com/premium_photo-1661772025451-1a3fc32c424a?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
                       />
                     </div>
 
-                    <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                      <h3 className="text-xl font-medium text-white">Skinny Jeans Blue</h3>
-
+                    <div className="absolute inset-0 flex flex-col items-start justify-end p-6 bg-black/50">
+                      <h3 className="text-xl font-medium text-white">吃饱，吃好 or 吃对？🤤🤤 </h3>
                       <p className="mt-1.5 text-pretty text-xs text-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sequi dicta impedit
-                        aperiam ipsum!
+                        日期：20/7/2024（星期六）
+                        <br />
+                        报名截止：10/07/2024 (星期三)
+                        <br />
+                        <br />
+                        您好！加影生命堂与生命泉福音中心将于来临7月份联办一场特别的健康讲座。。。
                       </p>
-
-                      <span
-                        className="mt-3 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                      <a href="https://forms.gle/bhkiUsXPwQjcvHQAA" target="_blank"
+                        className="mt-3 inline-block bg-red-500 rounded px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                       >
-                        Shop Now
-                      </span>
+                        立刻报名
+                      </a>
                     </div>
                   </a>
                 </SwiperSlide>
@@ -213,41 +224,74 @@ export default function Page({
                   <a href="#" className="group relative block">
                     <div className="relative h-[350px] sm:h-[450px]">
                       <img
-                        src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+                        src="https://plus.unsplash.com/premium_photo-1661378547884-ce0b2d304900?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
                       />
 
                       <img
-                        src="https://images.unsplash.com/photo-1593795899630-b6033c0fa58d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                        src="https://plus.unsplash.com/premium_vector-1683140985704-0e37bc7503af?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
                       />
                     </div>
 
-                    <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                      <h3 className="text-xl font-medium text-white">Skinny Jeans Blue</h3>
+                    <div className="absolute inset-0 flex flex-col items-start justify-end p-6 bg-black/50">
+                      <h3 className="text-xl font-medium text-white">双亲节特别活动</h3>
 
                       <p className="mt-1.5 text-pretty text-xs text-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sequi dicta impedit
-                        aperiam ipsum!
+                        日期：16/6/2024 (星期日)
+                        <br />
+                        报名截止：9/06/2024 (星期日)
+                        <br />
+                        <br />
+                        您好！青青一和二一同举办双亲节活动，邀请学生的父母亲参与。当天的活动有戏剧表演，吉他表演以及孩子们对父母亲的心底话。
                       </p>
 
-                      <span
-                        className="mt-3 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                      <a href="https://forms.gle/PAb5hJnbEbuViQ527" target="_blank"
+                        className="mt-3 inline-block bg-red-500 rounded px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                       >
-                        Shop Now
-                      </span>
+                        立刻报名
+                      </a>
                     </div>
                   </a>
                 </SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
+                <SwiperSlide>
+                  <a href="#" className="group relative block">
+                    <div className="relative h-[350px] sm:h-[450px]">
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1664302885020-76bf7d677b98?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
+                      />
+
+                      <img
+                        src="https://plus.unsplash.com/premium_photo-1681152384968-8939753a9068?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
+                      />
+                    </div>
+
+                    <div className="absolute inset-0 flex flex-col items-start justify-end p-6 bg-black/50">
+                      <h3 className="text-xl font-medium text-white">小精兵，大突破！2.0</h3>
+
+                      <p className="mt-1.5 text-pretty text-xs text-white">
+                        日期：31/5-1/6/2024 (星期五 - 星期六)
+                        <br />
+                        报名截止：15/05/2024 (星期三)
+                        <br />
+                        <br />
+                        您好！儿童乐园与少年军加影第四分队将举办 Pre-Junior Camp 2.0🤩🤩
+                      </p>
+
+                      <a href="https://forms.gle/PAb5hJnbEbuViQ527" target="_blank"
+                        className="mt-3 inline-block bg-red-500 rounded px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                      >
+                        立刻报名
+                      </a>
+                    </div>
+                  </a>
+                </SwiperSlide>
               </Swiper>
             </div>
           </div>
