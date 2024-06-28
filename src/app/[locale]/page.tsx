@@ -29,7 +29,7 @@ export default function Page({
 }:
   { params: { lang: string } }
 ) {
-  const t = useTranslations('Products');
+  const t = useTranslations('Landing');
   const [age, setAge] = useState(0);
   const [word, setWord] = useState(words[age]);
   const [copySuccess, setCopySuccess] = useState(false);
@@ -61,8 +61,8 @@ export default function Page({
         <div className='bg-black/65'>
           <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-56">
             <div className="text-center grid grid-cols-1 gap-12">
-              <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-6xl">欢迎来到
-                <span className="text-orange-600">加影生命堂</span>
+              <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-6xl">{t('welcome')}
+                <span className="text-orange-600">{t('church_name')}</span>
               </h2>
               <h2 className="text-2xl font-bold text-gray-100 ">
                 【约十10】「我来了，是要叫羊(或作人)
