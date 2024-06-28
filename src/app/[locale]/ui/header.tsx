@@ -11,17 +11,17 @@ export const Header = () => {
   // const params = useParams<{ lang: string }>()
   // console.log(params.lang);
   // const [lang, setLang] = useState(false)
+  const localActive = useLocale();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  // const [locale, setLocale] = useState(params.lang ?? 'cn')
   const locale = 'cn'
   const navigation = [
-    { name: '主页', href: `/${locale}/` },
-    { name: '关于我们', href: `/${locale}/about_us` },
-    { name: '活动与团契', href: `/${locale}/connect` },
-    { name: '资料', href: `/${locale}/resources` },
+    { name: '主页', href: `/${localActive}/` },
+    { name: '关于我们', href: `/${localActive}/about_us` },
+    { name: '活动与团契', href: `/${localActive}/connect` },
+    { name: '资料', href: `/${localActive}/resources` },
   ]
   const router = useRouter();
-  const localActive = useLocale();
+
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const toggleDropdown = () => {
@@ -102,7 +102,7 @@ export const Header = () => {
                 <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
               </div>
               {isOpen && (<div
-                className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                className="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                 role="menu"
               >
                 <ul className="py-1">
