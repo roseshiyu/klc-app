@@ -23,17 +23,23 @@ const words = [
   " 【以弗所书 5:19】当用诗章、颂词、灵歌、彼此对说，口唱心和的赞美主。",
 ];
 
-
-export default function Example() {
+import { useTranslations } from 'next-intl';
+export default function Page({
+  params
+}:
+  { params: { lang: string } }
+) {
+  const t = useTranslations('Products');
   const [age, setAge] = useState(0);
   const [word, setWord] = useState(words[age]);
   const [copySuccess, setCopySuccess] = useState(false);
-
+  const [dict, setDict] = useState(null);
   useEffect(() => {
     const randomAge = Math.floor(Math.random() * 5);
     setAge(randomAge);
     setWord(words[randomAge]);
   }, [words]);
+
 
   const handleCopy = () => {
     navigator.clipboard.writeText(word).then(() => {

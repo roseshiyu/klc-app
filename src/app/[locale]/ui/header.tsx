@@ -9,21 +9,17 @@ import { useRouter } from 'next/router'
 
 
 export const Header = () => {
-
-  const params = useParams<{ lang: string }>()
+  // const params = useParams<{ lang: string }>()
   // console.log(params.lang);
   // const [lang, setLang] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   // const [locale, setLocale] = useState(params.lang ?? 'cn')
+  const locale = 'cn'
   const navigation = [
-    // { name: '主页', href: `/${params.lang}/` },
-    // { name: '关于我们', href: `/${params.lang}/about_us` },
-    // { name: '活动与团契', href: `/${params.lang}/connect` },
-    // { name: '资料', href: `/${params.lang}/resources` },
-    { name: '主页', href: `/cn/` },
-    { name: '关于我们', href: `/cn/about_us` },
-    { name: '活动与团契', href: `/cn/connect` },
-    { name: '资料', href: `/cn/resources` },
+    { name: '主页', href: `/${locale}/` },
+    { name: '关于我们', href: `/${locale}/about_us` },
+    { name: '活动与团契', href: `/${locale}/connect` },
+    { name: '资料', href: `/${locale}/resources` },
   ]
 
   return (

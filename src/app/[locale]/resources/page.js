@@ -10,7 +10,6 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
-import { getDictionary } from '../dictionaries'
 import Image from 'next/image'
 import { building, dgn_y1_01, dgn_y1_02, dgn_y1_03, dgn_y1_04, dgn_y1_05, dgn_y1_06, dgn_y1_07_1, dgn_y1_07_2, dgn_y1_08, dgn_y1_09_1, dgn_y1_09_2, dgn_y1_10, dgn_y1_11, dgn_y1_12, dgn_y1_i } from '../../../../public';
 
