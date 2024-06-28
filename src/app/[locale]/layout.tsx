@@ -11,8 +11,13 @@ import {getMessages} from 'next-intl/server';
 const inter = Noto_Sans_SC({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://klc-app.vercel.app"),
+  keywords: ["Kajang", "Church", "Church in Kajang", "abcodoaskdpqowkepqwoekqweqwok"],
   title: "Kajang life chapel",
-  description: "Church in kajang",
+  description: "Church in Kajang",
+  openGraph: {
+    description: "Church in Kajang"
+  }
 };
 
 export default async function RootLayout({
