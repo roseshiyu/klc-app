@@ -32,24 +32,19 @@ export default async function RootLayout({
   const messages = await getMessages();
  
   return (
-    <html>
-      <body>
-        <div>under maintaince</div>
+    <html lang={locale}>
+      <body className={inter.className}>
+        <NextIntlClientProvider messages={messages}>
+          <div>
+            <Header />
+            {children}
+            <Footer />
+            <a href="https://wa.me/01111478477" target="_blank">
+              <Image className="fixed bottom-5 right-5 rounded-md" alt="Chat on WhatsApp" src={whatsApp} />
+            </a>
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
-    // <html lang={locale}>
-    //   <body className={inter.className}>
-    //     <NextIntlClientProvider messages={messages}>
-    //       <div>
-    //         <Header />
-    //         {children}
-    //         <Footer />
-    //         <a href="https://wa.me/01111478477" target="_blank">
-    //           <Image className="fixed bottom-5 right-5 rounded-md" alt="Chat on WhatsApp" src={whatsApp} />
-    //         </a>
-    //       </div>
-    //     </NextIntlClientProvider>
-    //   </body>
-    // </html>
   );
 }
