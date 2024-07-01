@@ -212,7 +212,7 @@ export default function Page({
                         <br />
                         您好！加影生命堂与生命泉福音中心将于来临7月份联办一场特别的健康讲座。。。
                       </p>
-                      <a href="https://forms.gle/bhkiUsXPwQjcvHQAA" target="_blank"
+                      <a href="https://forms.gle/t16YSY6sAAyQtgLG9" target="_blank"
                         className="mt-3 inline-block bg-red-500 rounded px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
                       >
                         立刻报名
