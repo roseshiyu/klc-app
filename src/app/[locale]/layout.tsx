@@ -35,7 +35,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          <div>
+          <div className="bg-neutral-50">
             <Header />
             {children}
             <Footer />

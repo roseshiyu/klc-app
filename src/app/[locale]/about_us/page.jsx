@@ -1,113 +1,139 @@
 
-export default async function Page({ params: { lang } }) {
+"use client";
+import Image from "next/image";
+import { WobbleCard } from "../ui/wobble-card";
+import { building, dgn_y1_01, dgn_y1_02, dgn_y1_03, dgn_y1_04, dgn_y1_05, dgn_y1_06, dgn_y1_07_1, dgn_y1_07_2, dgn_y1_08, dgn_y1_09_1, dgn_y1_09_2, dgn_y1_10, dgn_y1_11, dgn_y1_12, dgn_y1_i } from '../../../../public';
+import React from "react";
+import { StickyScroll } from "../ui/sticky-scroll-reveal";
+
+export default function Page({ params: { lang } }) {
   // const dict = await getDictionary(lang) // en
   // return <button>{dict.products.cart}</button> // Add to Cart
-    // const dict = await getDictionary(lang) // en
+  // const dict = await getDictionary(lang) // en
   // return <button>{dict.products.cart}</button> // Add to Cart
   return (
-    <div className="grid h-screen place-content-center bg-white px-4">
-      <div className="text-center">
-        <h1 className="text-9xl font-black text-gray-200">此路不通</h1>
-        <p className="mt-4 text-gray-500">【约翰福音14章6节】耶稣说：“我就是道路、真理、生命。若不是藉着我，没有人能到父那里去。</p>
-        <a
-          href="/"
-          className="mt-6 inline-block rounded bg-indigo-600 px-5 py-3 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring"
+    <div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8 w-full">
+        <WobbleCard
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-orange-800 min-h-[500px] lg:min-h-[300px]"
+          className=""
         >
-          回到神的家
-        </a>
+          <div className="max-w-xs">
+            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+              Gippity AI powers the entire universe
+            </h2>
+            <p className="mt-4 text-left  text-base/6 text-neutral-200">
+              With over 100,000 mothly active bot users, Gippity AI is the most
+              popular AI platform for developers.
+            </p>
+          </div>
+          <Image
+            src={building}
+            width={550}
+            height={550}
+            alt="linear demo image"
+            className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          />
+        </WobbleCard>
+        <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+          <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            No shirt, no shoes, no weapons.
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+            If someone yells “stop!”, goes limp, or taps out, the fight is over.
+          </p>
+
+        </WobbleCard>
+        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+          <div className="max-w-2xl">
+            <h2 className="max-w-2xl md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+              Signup for blazing-fast cutting-edge state of the art Gippity AI
+              wrapper today!
+            </h2>
+            <p className="mt-4 max-w-xl text-left  text-base/6 text-neutral-200">
+              With over 100,000 mothly active bot users, Gippity AI is the most
+              popular AI platform for developers.
+              With over 100,000 mothly active bot users, Gippity AI is the most
+              popular AI platform for developers.
+              With over 100,000 mothly active bot users, Gippity AI is the most
+              popular AI platform for developers.
+            </p>
+          </div>
+          <Image
+            src={dgn_y1_04}
+            width={500}
+            height={500}
+            alt="linear demo image"
+            className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+          />
+        </WobbleCard>
+      </div>
+      <div className="bg-orange-400 ">
+        <div className="mx-auto max-w-screen-xl px-4 py-12 ">
+          <div className="text-center text-xl font-bold flex justify-evenly ">
+            <h2>历史走廊 - 神一直的带领</h2>
+          </div>
+        </div>
+      </div>
+      <div>
+        <StickyScroll content={content} />
       </div>
     </div>
   )
 }
-{/* <div className="mx-auto max-w-screen-xl py-32 sm:py-48 lg:py-56">
-  <div className="space-y-4">
-    <details className="group [&_summary::-webkit-details-marker]:hidden border-2 rounded-xl border-red-500 bg-gray-50" open>
-      <summary
-        className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg  p-4 text-gray-900"
-      >
-        <h2 className="font-medium">数码好消息（第一年）</h2>
 
-        <svg
-          className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </summary>
-      {chapters.map((item, index) => {
-        return (
-          <div key={index} className={`flex flex-row justify-between p-4 ${index === 0 ? 'border-t border-red-400' : ''}`}>
-            <p className="text-gray-700 content-center">
-              {item.title}
-            </p>
-            <div className='grid justify-items-center gap-y-2'>
-              <div className='flex gap-x-2'>
-                <span className="whitespace-nowrap rounded-full bg-purple-100 border border-purple-700 px-2.5 py-0.5 text-sm text-purple-700">
-                  {item.tag}
-                </span>
-              </div>
-              <a
-                className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
-                href={item.href}
-                target="_blank"
-              >
-                点击查看
-              </a>
-            </div>
-          </div>
-        )
-      })}
-
-
-    </details>
-
-    <details className="group [&_summary::-webkit-details-marker]:hidden">
-      <summary
-        className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900"
-      >
-        <h2 className="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing?</h2>
-
-        <svg
-          className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </summary>
-
-      <p className="mt-4 px-4 leading-relaxed text-gray-700">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-        recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-        consequuntur distinctio corporis earum similique!
-      </p>
-    </details>
-  </div>
-</div> */}
-
-
-// export const chapters = [
-//   { title: '好消息 1 - 平安何处寻', href: `https://anyflip.com/qvwmh/rewk/`, tag: '福音' },
-//   { title: '好消息 2 - 末日', href: `https://anyflip.com/qvwmh/vcml/`, tag: '福音' },
-//   { title: '好消息 3 - 穆斯林与犹太人的冲突', href: `https://anyflip.com/qvwmh/hkgg/`, tag: '福音' },
-//   { title: '好消息 4 - 一本奇妙的书', href: `https://anyflip.com/qvwmh/pgpv/`, tag: '福音' },
-//   { title: '好消息 5 - 谁知晓明日', href: `https://anyflip.com/qvwmh/qeej/`, tag: '福音' },
-//   { title: '好消息 6 - 因为爱', href: `https://anyflip.com/qvwmh/orsq/`, tag: '福音' },
-//   { title: '好消息 7（上）- 神州古人的信仰', href: `https://anyflip.com/qvwmh/nmgl/`, tag: '福音' },
-//   {
-//     title: '好消息 7（下）- 神州古人的信仰', href: `https://anyflip.com/qvwmh/bfpf/
-// `, tag: '福音'
-//   },
-//   { title: '好消息 8  - 从犹太人的历史证明圣经的可信性', href: `https://anyflip.com/qvwmh/qkqu/`, tag: '福音' },
-//   { title: '圣诞好消息特刊', href: `https://anyflip.com/qvwmh/rilg/ `, tag: '福音' },
-//   { title: '好消息9（上）- 您岂能说没有上帝', href: `https://anyflip.com/qvwmh/aprx/`, tag: '福音' },
-//   { title: '好消息9（下）- 您岂能说没有上帝', href: `https://anyflip.com/qvwmh/pxsd/`, tag: '福音' },
-//   { title: '好消息 10 - 与上帝和好', href: `https://anyflip.com/qvwmh/diqp/ `, tag: '福音' },
-//   { title: '好消息 11 - 5W1H', href: `https://anyflip.com/qvwmh/hhhy/`, tag: '福音' },
-//   { title: '好消息 12 - 大结局', href: `https://anyflip.com/qvwmh/bgkx/`, tag: '福音' },
-// ]
+const content = [
+  {
+    title: "我们的开始",
+    description:
+      "2012年，我们。。。。.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Collaborative Editing
+      </div>
+    ),
+  },
+  {
+    title: "Real time changes",
+    description:
+      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src="/linear.webp"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Version control",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+        Version control
+      </div>
+    ),
+  },
+  {
+    title: "Running out of content",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Running out of content
+      </div>
+    ),
+  },
+];
+export function StickyScrollRevealDemo() {
+  return (
+    <div className="p-10">
+      <StickyScroll content={content} />
+    </div>
+  );
+}
