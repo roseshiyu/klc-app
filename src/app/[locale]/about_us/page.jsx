@@ -130,7 +130,7 @@ const content = [
     ),
   },
 ];
-export function StickyScrollRevealDemo() {
+export const StickyScrollRevealDemo = () => {
   return (
     <div className="p-10">
       <StickyScroll content={content} />
