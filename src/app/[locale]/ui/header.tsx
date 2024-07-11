@@ -146,12 +146,30 @@ export const Header = () => {
     <header className="inset-x-0 top-0 z-50">
       <nav className="bg-neutral-50 border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap">
               加影生命堂
             </span>
-          <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse z-50">
+          <div
+            className="items-center justify-between flex w-auto "
+            id="navbar-language"
+          >
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-50 rounded-lg bg-gray-50 md:space-x-8 sm:flex-row md:mt-0 md:border-0 md:bg-gray-50 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              {navigation.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    aria-current="page"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex items-center space-x-1 md:space-x-0 z-50">
             <div className="relative inline-block text-left  ">
-              <div onClick={toggleDropdown} className="inline-flex items-center w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50
+              <div onClick={toggleDropdown} className="hidden lg:inline-flex items-center w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50
                 dark:text-white cursor-pointer dark:hover:bg-gray-700 dark:hover:text-white ">
                 <Lang locale={localActive} />
                 <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -183,25 +201,6 @@ export const Header = () => {
               </div>
               )}
             </div>
-          </div>
-
-          <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-language"
-          >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-50 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-gray-50 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              {navigation.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                    aria-current="page"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
         </div >
       </nav >
