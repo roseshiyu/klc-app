@@ -1,10 +1,9 @@
 
 "use client";
 import Image from "next/image";
-import { WobbleCard } from "../ui/wobble-card";
-import { building, dgn_y1_01, dgn_y1_02, dgn_y1_03, dgn_y1_04, dgn_y1_05, dgn_y1_06, dgn_y1_07_1, dgn_y1_07_2, dgn_y1_08, dgn_y1_09_1, dgn_y1_09_2, dgn_y1_10, dgn_y1_11, dgn_y1_12, dgn_y1_i } from '../../../../public';
-import React from "react";
+import { building, dgn_y1_04 } from '../../../../public';
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
+import { WobbleCard } from "../ui/wobble-card";
 
 export default function Page({ params: { lang } }) {
   // const dict = await getDictionary(lang) // en
@@ -12,19 +11,18 @@ export default function Page({ params: { lang } }) {
   // const dict = await getDictionary(lang) // en
   // return <button>{dict.products.cart}</button> // Add to Cart
   return (
-    <div>
+    <div className="bg-orange-300 py-4">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8 w-full">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-orange-800 min-h-[500px] lg:min-h-[300px]"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-orange-400 min-h-[500px] lg:min-h-[300px]"
           className=""
         >
           <div className="max-w-xs">
             <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              Gippity AI powers the entire universe
+            主日崇拜
             </h2>
             <p className="mt-4 text-left  text-base/6 text-neutral-200">
-              With over 100,000 mothly active bot users, Gippity AI is the most
-              popular AI platform for developers.
+            每周日，早上8点30 - 10点30
             </p>
           </div>
           <Image

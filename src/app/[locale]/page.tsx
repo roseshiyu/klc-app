@@ -1,20 +1,14 @@
 "use client";
-import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
-import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 import { useEffect, useState } from "react";
-import Script from "next/script";
-import { building, whatsApp } from '../../../public';
-import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import './styles.css';
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 const words = [
   "【诗篇 95:1】来啊，我们要向耶和华歌唱，向拯救我们的磐石欢呼。",
   "【诗篇 95:6 - 7】来啊，我们要屈身敬拜，在造我们的耶和华面前跪下。 因为他是我们的神；我们是他草场的羊，是他手下的民。惟愿你们今天听他的话。",
@@ -52,13 +46,11 @@ export default function Page({
         console.error('Failed to copy text: ', err);
       });
   };
-
+  // C:\Users\Kx_98\Desktop\Coding\klc-app\public\images\building_light.png
   return (
     <div className="bg-orange-300">
-      <section
-        className="overflow-hidden bg-[url(https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-no-repeat bg-bottom"
-      >
-        <div className='bg-black/65'>
+      <section className="overflow-hidden bg-[url('../../../public/images/building_light.png')] bg-cover bg-no-repeat bg-center">
+        <div className='bg-black/50'>
           <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-56">
             <div className="text-center grid grid-cols-1 gap-12">
               <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-6xl">{t('welcome')}
@@ -74,8 +66,7 @@ export default function Page({
           </div>
         </div>
       </section>
-      <section>
-        <div className="bg-neutral-50 border-b-4 border-black/65">
+        {/* <div className="bg-neutral-50 border-b-4 border-black/65">
           <div className="mx-auto max-w-screen-xl px-4 py-12 ">
             <div className="text-center text-xl font-bold flex justify-evenly ">
               <h2>仁爱</h2>
@@ -89,14 +80,13 @@ export default function Page({
               <h2>节制</h2>
             </div>
           </div>
-        </div>
-      </section>
-      <section>
+        </div> */}
+      {/* <section>
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:h-auto lg:grid-cols-2">
             <div className="relative z-10 lg:py-16">
               <div className="relative h-64 sm:h-80 lg:h-full">
-                <Image src={building} alt="Kajang Life Chapel Building" className="absolute inset-0 h-full w-full object-cover" />
+                <Image src={building_light} alt="Kajang Life Chapel Building" className="absolute inset-0 h-full w-full object-cover" />
               </div>
             </div>
 
@@ -128,17 +118,16 @@ export default function Page({
                 </table>
                 <br />
                 <p className="text-gray-600 hover:text-gray-950">
-                  {/* {words[1]} */}
                   {words[age]}
                 </p>
-                {/* {copySuccess && (
+                {copySuccess && (
                     <p className="mt-4 text-green-500">Text copied to clipboard!</p>
-                  )} */}
+                  )}
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">

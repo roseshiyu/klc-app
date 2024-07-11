@@ -4,9 +4,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-    //   allow: ['/'],
-      disallow: '/',
+      allow: ['/'],
     },
-    // sitemap: 'https://klc-app.vercel.app/cn/sitemap.xml',
+    sitemap: 'https://klc-app.vercel.app/cn/sitemap.xml',
   }
 }

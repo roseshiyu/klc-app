@@ -1,3 +1,5 @@
+import { agape_pic_1, ertong_pic_1, gg1_pic_3 } from "@/public";
+import Image from "next/image";
 
 export default async function Page({ params: { lang } }) {
   return (
@@ -29,38 +31,37 @@ export default async function Page({ params: { lang } }) {
               datetime="2022-10-10"
               className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
             >
-              <span>GG3</span>
+              <span>ERTONG</span>
               <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span>GG3</span>
+              <span>ERTONG</span>
               <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span>GG3</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span>GG3</span>
+              <span>ERTONG</span>
             </time>
           </div>
 
           <div className="hidden sm:block sm:basis-72">
-            <img
+            <Image
               alt=""
-              src="https://scontent.fkul16-4.fna.fbcdn.net/v/t1.6435-9/105856535_3553727561338671_5937554867740153391_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=tlG1dmAWNBwQ7kNvgGgwbLu&_nc_ht=scontent.fkul16-4.fna&oh=00_AYAK8UJiv-g2h4bMZLfG3CuZ9QaenRXcKeYcMcGrcPqD3w&oe=66A97E31"
+              src={ertong_pic_1}
               className="aspect-square h-full w-full object-cover"
             />
           </div>
-
-          <div className="flex flex-1 flex-col justify-between">
+        <div className="flex flex-1 flex-col justify-between">
             <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
               <a href="#">
                 <h3 className="font-bold uppercase text-gray-900">
-                  青青三
+                儿童乐园 
                 </h3>
               </a>
 
               <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                年龄：10-12岁
+                年龄：3-9岁（四岁或以下的孩子需先经过观察，再决定是否接纳）
                 <br />
-                时间：1130am - 0100pm
+                时间：9:30am - 12:00pm （每周六）
                 <br />
-                活动：圣经故事
+                活动：唱诗歌、圣经故事、品格学习、体能训练、生活技能、美术等 
+                <br />
+                需携带：水壶、文具、茶点（15min 小休时间）
               </p>
             </div>
 
@@ -80,20 +81,18 @@ export default async function Page({ params: { lang } }) {
               datetime="2022-10-10"
               className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
             >
-              <span>GG2</span>
+              <span>GG3</span>
               <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span>GG2</span>
+              <span>GG3</span>
               <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span>GG2</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span>GG2</span>
+              <span>GG3</span>
             </time>
           </div>
 
           <div className="hidden sm:block sm:basis-72">
             <img
-              alt=""
-              src="https://scontent.fkul16-3.fna.fbcdn.net/v/t1.6435-9/104953662_10157339564723093_2159322717923082708_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=ZW8Gd1S5y-MQ7kNvgFwcHVi&_nc_ht=scontent.fkul16-3.fna&oh=00_AYAy0fXZRqV-3hsqCdxIsmTPC2xmCM1vleKJpEKCPRvrYQ&oe=66A98DBD"
+              alt="GG3"
+              src=""
               className="aspect-square h-full w-full object-cover"
             />
           </div>
@@ -102,16 +101,16 @@ export default async function Page({ params: { lang } }) {
             <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
               <a href="#">
                 <h3 className="font-bold uppercase text-gray-900">
-                  青青二
+                  青青三
                 </h3>
               </a>
 
               <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                年龄：预备班 - 中三
+                年龄：10-12岁
                 <br />
-                时间：1130am - 0100pm
+                时间：陪读班 （每周六 9:00am - 10:30am），一起温习 一起游戏  
                 <br />
-                活动：圣经故事
+                时间：青青三（每周日 11:30am -1:00pm） 唱歌，品格分享，圣经故事 等等
               </p>
             </div>
 
@@ -136,15 +135,13 @@ export default async function Page({ params: { lang } }) {
               <span>GG1</span>
               <span className="w-px flex-1 bg-gray-900/10"></span>
               <span>GG1</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span>GG1</span>
             </time>
           </div>
 
           <div className="hidden sm:block sm:basis-72">
-            <img
-              alt=""
-              src="https://scontent.fkul16-3.fna.fbcdn.net/v/t1.6435-9/105587307_10157588657449353_6524608163234373266_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=sGkxH_-ee-8Q7kNvgG87Jaj&_nc_ht=scontent.fkul16-3.fna&oh=00_AYBYvhTR7dHNZS2IXFbfy4kF6jPvi3Twx1LP7qv7-tUhbw&oe=66A99649"
+            <Image
+              alt="GG1"
+              src={gg1_pic_3}
               className="aspect-square h-full w-full object-cover"
             />
           </div>
@@ -160,9 +157,57 @@ export default async function Page({ params: { lang } }) {
               <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
                 年龄：中四 - 中六
                 <br />
-                时间：1130am - 0100pm
+                时间：11:30am - 01:00pm
                 <br />
                 活动：圣经故事
+              </p>
+            </div>
+
+            <div className="sm:flex sm:items-end sm:justify-end">
+              <a
+                href="#"
+                className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
+              >
+                想了解更多，就快快联系我们！
+              </a>
+            </div>
+          </div>
+        </article>
+        <article className=" flex bg-white transition hover:shadow-xl">
+          <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
+            <time
+              datetime="2022-10-10"
+              className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
+            >
+              <span>Agape</span>
+              <span className="w-px flex-1 bg-gray-900/10"></span>
+              <span>Agape</span>
+              <span className="w-px flex-1 bg-gray-900/10"></span>
+              <span>Agape</span>
+            </time>
+          </div>
+
+          <div className="hidden sm:block sm:basis-72">
+            <Image
+              alt="Agape"
+              src={agape_pic_1}
+              className="aspect-square h-full w-full object-cover"
+            />
+          </div>
+
+          <div className="flex flex-1 flex-col justify-between">
+            <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
+              <a href="#">
+                <h3 className="font-bold uppercase text-gray-900">
+                  爱加倍
+                </h3>
+              </a>
+              <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
+                年龄：大专生及工作者
+                <br />
+                时间：8:00pm - 10:00pm （每周六）
+                <br />
+                活动：信息讲座，分享交流，团康活动
               </p>
             </div>
 

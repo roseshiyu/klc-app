@@ -1,35 +1,34 @@
-import { cn } from "@/utils/cn";
-import React from "react";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
-  IconArrowWaveRightUp,
   IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
+  IconFileBroken
 } from "@tabler/icons-react";
-import Image from 'next/image'
-import { building, dgn_y1_01, dgn_y1_02, dgn_y1_03, dgn_y1_04, dgn_y1_05, dgn_y1_06, dgn_y1_07_1, dgn_y1_07_2, dgn_y1_08, dgn_y1_09_1, dgn_y1_09_2, dgn_y1_10, dgn_y1_11, dgn_y1_12, dgn_y1_i } from '../../../../public';
+import Image from 'next/image';
+import { dgn_y1_01, dgn_y1_02, dgn_y1_03, dgn_y1_04, dgn_y1_05, dgn_y1_06, dgn_y1_07_1, dgn_y1_07_2, dgn_y1_08, dgn_y1_09_1, dgn_y1_09_2, dgn_y1_10, dgn_y1_11, dgn_y1_12, dgn_y1_i } from '../../../../public';
+import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 
 export default async function Page({ params: { lang } }) {
   return (
 
     <div className="bg-orange-200">
-      <div class="relative font-sans before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
-        <Image src={building} alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
-
-        <div class="min-h-[350px] relative z-40 h-full max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white p-6">
-          <h2 class="sm:text-4xl text-2xl font-bold mb-6">寻索资料</h2>
-          <p class="sm:text-lg text-base text-center text-gray-200">【诗二十五5】「求你以你的真理引导我，教训我，因为你是救我的神，我终日等候你。」</p>
+            <section className="overflow-hidden bg-[url('../../../public/images/building.png')] bg-cover bg-no-repeat bg-center">
+        <div className='bg-black/50'>
+          <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-56">
+            <div className="text-center grid grid-cols-1 gap-12">
+              <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-6xl">
+                数码<span className="text-orange-600">好消息</span>
+              </h2>
+              <h2 className="text-2xl font-bold text-gray-100 ">
+                【马太廿四14上】这天国的福音要
+                <span className="text-orange-600">传遍天下</span>
+              </h2>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
       <div className="p-8">
-        <div className="my-8 text-center">
-          <h1 className="sm:text-4xl text-2xl font-bold">数码好消息</h1>
+        {/* <div className="my-8 text-center">
           <div className="inline-flex rounded-lg border border-gray-100 bg-gray-100 p-1">
-            {/* <button
+            <button
               className="inline-block rounded-md px-4 py-2 text-sm text-gray-500 hover:text-gray-700 focus:relative"
             >
               第一年
@@ -45,9 +44,9 @@ export default async function Page({ params: { lang } }) {
               className="inline-block rounded-md bg-white px-4 py-2 text-sm text-blue-500 shadow-sm focus:relative"
             >
               第三年
-            </button> */}
+            </button>
           </div>
-        </div>
+        </div> */}
         <BentoGrid className="max-w-4xl mx-auto">
           {items.map((item, i) => (
             <BentoGridItem

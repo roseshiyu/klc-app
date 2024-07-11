@@ -1,11 +1,8 @@
 "use client";
-import { useState, ChangeEvent, useTransition } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
+import { useState, useTransition } from 'react';
 
 export const Header = () => {
   // const params = useParams<{ lang: string }>()
@@ -16,9 +13,9 @@ export const Header = () => {
   const locale = 'cn'
   const navigation = [
     { name: '主页', href: `/${localActive}/` },
-    { name: '关于我们', href: `/${localActive}/about_us` },
+    // { name: '关于我们', href: `/${localActive}/about_us` },
     { name: '活动与团契', href: `/${localActive}/connect` },
-    { name: '资料', href: `/${localActive}/resources` },
+    { name: '数码好消息', href: `/${localActive}/resources` },
   ]
   const router = useRouter();
 
@@ -149,14 +146,9 @@ export const Header = () => {
     <header className="inset-x-0 top-0 z-50">
       <nav className="bg-neutral-50 border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href="https://www.facebook.com/profile.php?id=100089516345126"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Kajang Life Chapel
+              加影生命堂
             </span>
-          </a>
           <div className="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse z-50">
             <div className="relative inline-block text-left  ">
               <div onClick={toggleDropdown} className="inline-flex items-center w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50
@@ -169,7 +161,7 @@ export const Header = () => {
                 role="menu"
               >
                 <ul className="py-1">
-                  <li
+                  {/* <li
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                     role="menuitem"
                     onClick={() => onSelectChange('en')}
@@ -177,7 +169,7 @@ export const Header = () => {
                     <div className="inline-flex items-center">
                       <En />
                     </div>
-                  </li>
+                  </li> */}
                   <li
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                     role="menuitem"
@@ -202,7 +194,7 @@ export const Header = () => {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     aria-current="page"
                   >
                     {item.name}
