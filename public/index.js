@@ -27,3 +27,9 @@ export { default as gg1_pic_4 } from './gg1/pic4.jpg';
 export { default as agape_pic_1 } from './agape/pic1.jpg';
 export { default as agape_pic_2 } from './agape/pic2.jpeg';
 
+export { default as gg2_pic_1 } from './gg2/pic1.jpg';
+export { default as gg2_pic_2 } from './gg2/pic2.jpeg';
+
+export { default as gg3_pic_1 } from './gg3/pic1.jpeg';
+export { default as gg3_pic_2 } from './gg3/pic2.jpeg';
+
