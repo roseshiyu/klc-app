@@ -39,7 +39,7 @@ export default async function Page({ params: { lang } }) {
             </time>
           </div>
 
-          <div className="hidden sm:block sm:basis-72">
+          <div className="basis-36 sm:block sm:basis-72">
             <Image
               alt=""
               src={ertong_pic_1}
@@ -90,7 +90,7 @@ export default async function Page({ params: { lang } }) {
             </time>
           </div>
 
-          <div className="hidden sm:block sm:basis-72">
+          <div className="basis-36 sm:block sm:basis-72">
             <Image
               alt="GG1"
               src={gg3_pic_1}
@@ -139,7 +139,7 @@ export default async function Page({ params: { lang } }) {
             </time>
           </div>
 
-          <div className="hidden sm:block sm:basis-72">
+          <div className="basis-36 sm:block sm:basis-72">
             <Image
               alt="GG2"
               src={gg2_pic_1}
@@ -189,7 +189,7 @@ export default async function Page({ params: { lang } }) {
             </time>
           </div>
 
-          <div className="hidden sm:block sm:basis-72">
+          <div className="basis-36 sm:block sm:basis-72">
             <Image
               alt="GG1"
               src={gg1_pic_3}
@@ -237,7 +237,7 @@ export default async function Page({ params: { lang } }) {
             </time>
           </div>
 
-          <div className="hidden sm:block sm:basis-72">
+          <div className="basis-36 sm:block sm:basis-72">
             <Image
               alt="Agape"
               src={agape_pic_1}

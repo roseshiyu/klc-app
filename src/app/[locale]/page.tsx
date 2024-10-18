@@ -152,12 +152,12 @@ export default function Page({
                   </p>
                 </header>
 
-                <a
+                {/* <a
                   href="#"
                   className="mt-8 inline-block rounded border border-red-500 bg-red-500 px-12 py-3 text-sm font-medium text-white transition hover:shadow focus:outline-none focus:ring"
                 >
                   显示所有
-                </a>
+                </a> */}
               </div>
             </div>
             <div className="lg:col-span-2 lg:py-8">
