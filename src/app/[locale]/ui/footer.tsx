@@ -124,15 +124,15 @@ export const Footer = () => {
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> 少年军 </a>
+                    <a className="text-gray-700 transition"> 少年军 </a>
                   </li>
 
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> 陪读班 </a>
+                    <a className="text-gray-700 transition"> 陪读班 </a>
                   </li>
 
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> 关怀 </a>
+                    <a className="text-gray-700 transition"> 关怀 </a>
                   </li>
                 </ul>
               </div>
@@ -142,28 +142,31 @@ export const Footer = () => {
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> 儿童乐园 （3-9岁）</a>
+                    <a className="text-gray-700 transition "> 儿童乐园 （3-9岁）</a>
                   </li>
 
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> GG3（10-12岁） </a>
+                    <a className="text-gray-700 transition "> GG3（10-12岁） </a>
                   </li>
 
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> GG2（预备班-中三） </a>
+                    <a className="text-gray-700 transition "> GG2（预备班-中三） </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> GG1（中四-中六） </a>
+                    <a className="text-gray-700 transition "> GG1（中四-中六） </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> 爱加倍（高专-职青） </a>
+                    <a className="text-gray-700 transition "> 爱加倍（高专-职青） </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> 伉俪 </a>
+                    <a className="text-gray-700 transition "> 伉俪 </a>
                   </li>
                   <li>
+                    <a className="text-gray-700 transition "> 乐龄 </a>
+                  </li>
+                  {/* <li>
                     <a className="text-gray-700 transition hover:opacity-75"> 乐龄 </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 
@@ -172,7 +175,7 @@ export const Footer = () => {
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a className="text-gray-700 transition hover:opacity-75"> 数码好消息 </a>
+                    <a className="text-gray-700 transition"> 数码好消息 </a>
                   </li>
                 </ul>
               </div>

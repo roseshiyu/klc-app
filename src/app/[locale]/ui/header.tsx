@@ -24,6 +24,11 @@ export const Header = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const [isOpenRoute, setIsOpenRoute] = useState(false);
+  const toggleDropdownRoute = () => {
+    setIsOpenRoute(!isOpenRoute);
+  };
   const onSelectChange = (locale: string) => {
     const nextLocale = locale;
     startTransition(() => {
@@ -145,7 +150,7 @@ export const Header = () => {
   return (
     <header className="inset-x-0 top-0 z-50">
       <nav className="bg-neutral-50 border-gray-200 ">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="justify-end max-w-screen-xl flex flex-wrap items-center md:justify-between mx-auto p-4">
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
               加影生命堂
             </span>
@@ -153,7 +158,41 @@ export const Header = () => {
             className="items-center justify-between flex w-auto "
             id="navbar-language"
           >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-50 rounded-lg bg-gray-50 md:space-x-8 sm:flex-row md:mt-0 md:border-0 md:bg-gray-50 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <button onClick={toggleDropdownRoute}
+          className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden ml-8"
+        >
+          <span className="sr-only">Toggle menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="size-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          {isOpenRoute && (<div
+                className="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                role="menu"
+              >
+                <ul className="py-1">
+                {navigation.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    aria-current="page"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+                </ul>
+              </div>
+              )}
+        </button>
+            <ul className="hidden md:flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-50 rounded-lg bg-gray-50 md:space-x-8 sm:flex-row md:mt-0 md:border-0 md:bg-gray-50 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <a
