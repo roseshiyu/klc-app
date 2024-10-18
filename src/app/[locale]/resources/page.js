@@ -10,7 +10,7 @@ export default async function Page({ params: { lang } }) {
   return (
 
     <div className="bg-orange-200">
-            <section className="overflow-hidden bg-[url('../../../public/images/building.png')] bg-cover bg-no-repeat bg-center">
+      <section className="overflow-hidden bg-[url('../../../public/images/building.png')] bg-cover bg-no-repeat bg-center">
         <div className='bg-black/50'>
           <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-56">
             <div className="text-center grid grid-cols-1 gap-12">

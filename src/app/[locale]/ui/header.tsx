@@ -13,7 +13,7 @@ export const Header = () => {
   const locale = 'cn'
   const navigation = [
     { name: '主页', href: `/${localActive}/` },
-    // { name: '关于我们', href: `/${localActive}/about_us` },
+    { name: '关于我们', href: `/${localActive}/about_us` },
     { name: '活动与团契', href: `/${localActive}/connect` },
     { name: '数码好消息', href: `/${localActive}/resources` },
   ]

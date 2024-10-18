@@ -49,6 +49,7 @@ export default function Page({
   // C:\Users\Kx_98\Desktop\Coding\klc-app\public\images\building_light.png
   return (
     <div className="bg-orange-300">
+       {/* <AnimatedList> */}
       <section className="overflow-hidden bg-[url('../../../public/images/building_light.png')] bg-cover bg-no-repeat bg-center">
         <div className='bg-black/50'>
           <div className="mx-auto max-w-screen-xl py-24 sm:py-40 lg:py-56">
