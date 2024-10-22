@@ -17,7 +17,7 @@ export default async function Page({ params: { lang } }) {
               <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-6xl">
                 数码<span className="text-orange-600">好消息</span>
               </h2>
-              <h2 className="text-2xl font-bold text-gray-100 ">
+              <h2 className="text-2xl font-bold text-gray-100 border-l-4 border-white m-4 md:border-0 md:m-0 ">
                 【马太廿四14上】这天国的福音要
                 <span className="text-orange-600">传遍天下</span>
               </h2>
