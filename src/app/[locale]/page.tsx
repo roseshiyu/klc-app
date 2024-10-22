@@ -57,7 +57,7 @@ export default function Page({
               <h2 className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-6xl">{t('welcome')}
                 <span className="text-orange-600">{t('church_name')}</span>
               </h2>
-              <h2 className="text-2xl font-bold text-gray-100 ">
+              <h2 className="text-2xl font-bold text-gray-100 border-l-4 border-white m-4 md:border-0 md:m-0">
                 【约十10】「我来了，是要叫羊(或作人)
                 <span className="text-orange-600">得生命</span>， 并且
                 <span className="text-orange-600">得的更丰盛</span>

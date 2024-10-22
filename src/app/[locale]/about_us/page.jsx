@@ -21,13 +21,13 @@ export default function Page({ params: { lang } }) {
     src={building}
     className="h-56 w-full object-cover sm:h-full"
   />
-  <div className="my-auto max-w-xl md:p-12 lg:px-16 lg:py-24">
+  <div className="my-auto max-w-xl p-4 sm:p-8 md:p-12 lg:px-16 lg:py-24">
     <div className=" text-left ltr:sm:text-left rtl:sm:text-right">
       <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
       加影生命堂
       </h2>
 
-      <p className="hidden text-gray-500 md:mt-4 md:block">
+      <p className=" text-gray-500 md:mt-4 ">
       我们是一间位于马来西亚雪兰莪州加影的基督徒教会，弟兄会背景的独立教会。野新福音堂差派亚绍兄夫妇创办此教会。
       </p>
       <table className="table-auto mt-4 md:mt-8">
@@ -126,7 +126,8 @@ export default function Page({ params: { lang } }) {
         </div>
       </div>
       <div className="px-6">
-      <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+      <div className="max-w-screen-2xl mx-auto antialiased py-4 relative">
+        <div className="p-4 bg-gray-50 rounded-xl">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-10">
             {item?.badge && (
@@ -146,6 +147,7 @@ export default function Page({ params: { lang } }) {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </div>
     </div>
