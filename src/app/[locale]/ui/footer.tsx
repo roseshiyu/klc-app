@@ -59,7 +59,7 @@ export const Footer = () => {
                         />
                       </svg>
 
-                      <span className="flex-1 text-gray-700">0387404406</span>
+                      <span className="flex-1 text-gray-700">03-87418959</span>
                     </a>
                   </li>
 
@@ -87,7 +87,7 @@ export const Footer = () => {
                     </svg>
 
                     <address className="-mt-0.5 flex-1 not-italic text-gray-700">
-                      1, Jalan Muhibbah 8, Taman Muhibbah, 43000 Kajang, Selangor
+                      1, Jalan Muhibbah 3, Taman Muhibbah, 43000 Kajang, Selangor.
                     </address>
 
                   </li>
@@ -146,14 +146,14 @@ export const Footer = () => {
                   </li>
 
                   <li>
-                    <a className="text-gray-700 transition "> GG3（10-12岁） </a>
+                    <a className="text-gray-700 transition "> 青青3（10-12岁） </a>
                   </li>
 
                   <li>
-                    <a className="text-gray-700 transition "> GG2（预备班-中三） </a>
+                    <a className="text-gray-700 transition "> 青青2（预备班-中三） </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 transition "> GG1（中四-中六） </a>
+                    <a className="text-gray-700 transition "> 青青1（中四-中六） </a>
                   </li>
                   <li>
                     <a className="text-gray-700 transition "> 爱加倍（高专-职青） </a>
