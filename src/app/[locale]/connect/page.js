@@ -53,21 +53,20 @@ export default async function Page({ params: { lang } }) {
                   儿童乐园
                 </h3>
               </a>
-
+              
               <p className="mt-2 line-clamp-4 text-sm/relaxed text-gray-700">
-                年龄：3-9岁（四岁或以下的孩子需先经过观察，再决定是否接纳）
+                年龄：4-9岁 {/* （四岁或以下的孩子需先经过观察，再决定是否接纳） */}
                 <br />
-                时间：9:30am - 12:00pm （每周六）
+                时间：9:30am - 12:00pm （星期六）
                 <br />
                 活动：唱诗歌、圣经故事、品格学习、体能训练、生活技能、美术等
                 <br />
-                需携带：水壶、文具、茶点（15min 小休时间）
+                {/* 需携带：水壶、文具、茶点（15min 小休时间） */}
               </p>
             </div>
 
             <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="#"
+              <a href={"https://wa.me/+601111478477?text="+encodeURIComponent("你好，我想了解关于更多儿童乐园的详情。")} target="_blank"
                 className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
               >
                 想了解更多，就快快联系我们！
@@ -109,15 +108,16 @@ export default async function Page({ params: { lang } }) {
               <p className="mt-2 line-clamp-4 text-sm/relaxed text-gray-700">
                 年龄：10-12岁
                 <br />
-                时间：陪读班 （每周六 9:00am - 10:30am）一起温习，一起游戏
+                {/* 时间：陪读班 （每周六 9:00am - 10:30am）一起温习，一起游戏
+                <br /> */}
+                时间：11:30am - 1:00pm（星期日）
                 <br />
-                时间：青青三（每周日 11:30am -1:00pm） 唱歌，品格分享，圣经故事等
+                活动：唱歌，品格分享，圣经故事等
               </p>
             </div>
 
             <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="#"
+              <a href={"https://wa.me/+601111478477?text="+encodeURIComponent("你好，我想了解关于更多青青三的详情。")} target="_blank"
                 className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
               >
                 想了解更多，就快快联系我们！
@@ -157,17 +157,16 @@ export default async function Page({ params: { lang } }) {
               <p className="mt-2 line-clamp-4 text-sm/relaxed text-gray-700">
                 年龄：预备班 - 中三学生
                 <br />
-                时间：下午11点 - 1点
+                时间：11:00am - 1:00pm（星期日）
                 <br />
                 活动：品格讲座，团康活动，户外活动，功课班
                 <br />
-                备注：1）穿着得体 2）携带水壶，文具，笔记
+                {/* 备注：1）穿着得体 2）携带水壶，文具，笔记 */}
               </p>
             </div>
 
             <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="#"
+              <a href={"https://wa.me/+601111478477?text="+encodeURIComponent("你好，我想了解关于更多青青二的详情。")} target="_blank"
                 className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
               >
                 想了解更多，就快快联系我们！
@@ -205,17 +204,16 @@ export default async function Page({ params: { lang } }) {
                 </h3>
               </a>
               <p className="mt-2 line-clamp-4 text-sm/relaxed text-gray-700">
-                年龄：中四到中六（16-18岁）
+                年龄：中四 - 中六学生
                 <br />
-                时间：11:15am - 01:00pm
+                时间：11:15am - 01:00pm（星期日）
                 <br />
                 活动：查经，唱诗歌，生活讲座
               </p>
             </div>
 
             <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="#"
+              <a href={"https://wa.me/+601111478477?text="+encodeURIComponent("你好，我想了解关于更多青青一的详情。")} target="_blank"
                 className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
               >
                 想了解更多，就快快联系我们！
@@ -255,15 +253,14 @@ export default async function Page({ params: { lang } }) {
               <p className="mt-2 line-clamp-4 text-sm/relaxed text-gray-700">
                 年龄：大专生及工作者
                 <br />
-                时间：8:00pm - 10:00pm （每周六）
+                时间：8:00pm - 10:00pm （星期六）
                 <br />
                 活动：信息讲座，分享交流，团康活动
               </p>
             </div>
 
             <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="#"
+              <a href={"https://wa.me/+601111478477?text="+encodeURIComponent("你好，我想了解关于更多爱加倍的详情。")} target="_blank"
                 className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
               >
                 想了解更多，就快快联系我们！

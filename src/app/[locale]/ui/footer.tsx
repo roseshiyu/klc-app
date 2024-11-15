@@ -35,7 +35,7 @@ export const Footer = () => {
                         />
                       </svg>
 
-                      <span className="flex-1 text-gray-700">klc@gmail.com</span>
+                      <span className="flex-1 text-gray-700">kajanglc08@gmail.comm</span>
                     </a>
                   </li>
 
@@ -146,14 +146,14 @@ export const Footer = () => {
                   </li>
 
                   <li>
-                    <a className="text-gray-700 transition "> 青青3（10-12岁） </a>
+                    <a className="text-gray-700 transition "> 青青三（10-12岁） </a>
                   </li>
 
                   <li>
-                    <a className="text-gray-700 transition "> 青青2（预备班-中三） </a>
+                    <a className="text-gray-700 transition "> 青青二（预备班-中三） </a>
                   </li>
                   <li>
-                    <a className="text-gray-700 transition "> 青青1（中四-中六） </a>
+                    <a className="text-gray-700 transition "> 青青一（中四-中六） </a>
                   </li>
                   <li>
                     <a className="text-gray-700 transition "> 爱加倍（高专-职青） </a>

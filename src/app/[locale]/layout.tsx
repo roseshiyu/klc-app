@@ -38,7 +38,7 @@ export default async function RootLayout({
             <Header />
             {children}
             <Footer />
-            <a href={"https://wa.me/+601111478477?text="+encodeURIComponent("Hi, i came form klc website")} target="_blank">
+            <a href={"https://wa.me/+601111478477?text="+encodeURIComponent("Hi, i came from klc website")} target="_blank">
               <Image className="fixed bottom-5 right-5 rounded-md" alt="Chat on WhatsApp" src={whatsApp} />
             </a>
           </div>
